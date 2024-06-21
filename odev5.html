@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anket Formu</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input[type="text"],
+        input[type="email"],
+        select,
+        textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            box-sizing: border-box;
+        }
+        input[type="radio"],
+        input[type="checkbox"] {
+            margin-right: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Anket Formu</h1>
+    <form action="#" method="POST">
+        <div class="form-group">
+            <label for="ad">Ad:</label>
+            <input type="text" id="ad" name="ad" required>
+        </div>
+        <div class="form-group">
+            <label for="email">E-posta:</label>
+            <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+            <label>Yaş Grubu:</label>
+            <input type="radio" id="age1" name="yas_grubu" value="18-25">
+            <label for="age1">18-25</label>
+            <input type="radio" id="age2" name="yas_grubu" value="26-35">
+            <label for="age2">26-35</label>
+            <input type="radio" id="age3" name="yas_grubu" value="36-45">
+            <label for="age3">36-45</label>
+            <input type="radio" id="age4" name="yas_grubu" value="46+">
+            <label for="age4">46+</label>
+        </div>
+        <div class="form-group">
+            <label for="renk">Favori Renk:</label>
+            <select id="renk" name="renk" required>
+                <option value="">Bir renk seçin</option>
+                <option value="kirmizi">Kırmızı</option>
+                <option value="mavi">Mavi</option>
+                <option value="yesil">Yeşil</option>
+                <option value="sari">Sarı</option>
+                <option value="mor">Mor</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="geribildirim">Geri Bildirim:</label>
+            <textarea id="geribildirim" name="geribildirim" rows="4" required></textarea>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" id="gizlilik" name="gizlilik" required>
+            <label for="gizlilik">Gizlilik politikasını kabul ediyorum</label>
+        </div>
+        <button type="submit">Gönder</button>
+    </form>
+</body>
+</html>
